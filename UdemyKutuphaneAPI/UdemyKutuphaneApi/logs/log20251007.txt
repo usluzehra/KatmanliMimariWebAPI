@@ -1,0 +1,251 @@
+2025-10-07 15:11:26.918 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 15:11:26.957 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 15:11:27.065 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 15:11:27.065 +03:00 [INF] Hosting environment: Development
+2025-10-07 15:11:27.065 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 15:11:28.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 15:11:28.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 344.6577ms
+2025-10-07 15:11:28.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 15:11:28.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 15:11:28.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.7729ms
+2025-10-07 15:11:29.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.9767ms
+2025-10-07 15:11:29.746 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 15:11:29.765 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.037ms
+2025-10-07 15:11:59.209 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/Book/Create - application/json 114
+2025-10-07 15:11:59.222 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Create (UdemyKutuphaneAPI)'
+2025-10-07 15:11:59.249 +03:00 [INF] Route matched with {action = "Create", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(KutuphaneDataAccess.DTOs.BookCreateDto) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 15:12:01.525 +03:00 [INF] Yeni kitap oluşturuldu:
+2025-10-07 15:12:01.534 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneDataAccess.DTOs.BookCreateDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-07 15:12:01.561 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Create (UdemyKutuphaneAPI) in 2309.5646ms
+2025-10-07 15:12:01.562 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Create (UdemyKutuphaneAPI)'
+2025-10-07 15:12:01.569 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/Book/Create - 200 null application/json; charset=utf-8 2360.2505ms
+2025-10-07 16:14:44.217 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:14:44.260 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:14:44.382 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:14:44.382 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:14:44.383 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:14:45.151 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:14:45.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 236.4375ms
+2025-10-07 16:14:45.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:14:45.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:14:45.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.3633ms
+2025-10-07 16:14:45.462 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.8362ms
+2025-10-07 16:14:46.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:14:46.076 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.2849ms
+2025-10-07 16:14:56.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-07 16:14:56.453 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:14:56.469 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:14:58.527 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:14:58.542 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 2069.8788ms
+2025-10-07 16:14:58.542 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:14:58.551 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 2106.3325ms
+2025-10-07 16:15:13.257 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByCategoryId?categoryId=0 - null null
+2025-10-07 16:15:13.259 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI)'
+2025-10-07 16:15:13.268 +03:00 [INF] Route matched with {action = "GetBooksByCategoryId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByCategoryId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:15:13.408 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:15:13.408 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI) in 139.7254ms
+2025-10-07 16:15:13.408 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI)'
+2025-10-07 16:15:13.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByCategoryId?categoryId=0 - 200 null application/json; charset=utf-8 152.3722ms
+2025-10-07 16:24:12.740 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:24:12.783 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:24:12.934 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:24:12.934 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:24:12.934 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:24:13.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:24:13.415 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 240.2992ms
+2025-10-07 16:24:13.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:24:13.438 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:24:13.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.6861ms
+2025-10-07 16:24:13.477 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.735ms
+2025-10-07 16:24:14.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:24:14.026 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.1606ms
+2025-10-07 16:24:20.452 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - null null
+2025-10-07 16:24:20.470 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:24:20.508 +03:00 [INF] Route matched with {action = "GetBooksByAuthorId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByAuthorId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:24:22.367 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-07 16:24:22.371 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI) in 1859.5383ms
+2025-10-07 16:24:22.371 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:24:22.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - 404 null text/plain; charset=utf-8 1926.5254ms
+2025-10-07 16:24:29.753 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/ListAll - null null
+2025-10-07 16:24:29.755 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:24:29.757 +03:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-07 16:24:29.836 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:24:29.849 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI) in 91.2595ms
+2025-10-07 16:24:29.849 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:24:29.849 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/ListAll - 200 null application/json; charset=utf-8 96.3547ms
+2025-10-07 16:24:36.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=1 - null null
+2025-10-07 16:24:36.236 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:24:36.236 +03:00 [INF] Route matched with {action = "GetBooksByAuthorId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByAuthorId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:24:36.250 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-07 16:24:36.250 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI) in 14.4671ms
+2025-10-07 16:24:36.250 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:24:36.251 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=1 - 404 null text/plain; charset=utf-8 16.8383ms
+2025-10-07 16:24:50.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-07 16:24:50.170 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:24:50.171 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:24:50.180 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:24:50.183 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 12.0834ms
+2025-10-07 16:24:50.183 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:24:50.183 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 14.3006ms
+2025-10-07 16:25:07.509 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - null null
+2025-10-07 16:25:07.510 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:25:07.510 +03:00 [INF] Route matched with {action = "GetBooksByAuthorId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByAuthorId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:25:07.512 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-07 16:25:07.512 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI) in 1.9408ms
+2025-10-07 16:25:07.512 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:25:07.512 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - 404 null text/plain; charset=utf-8 3.3889ms
+2025-10-07 16:25:47.353 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:25:47.394 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:25:47.562 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:25:47.562 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:25:47.562 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:25:48.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:25:48.303 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 246.0922ms
+2025-10-07 16:25:48.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:25:48.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:25:48.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 10.0996ms
+2025-10-07 16:25:48.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.152ms
+2025-10-07 16:25:48.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:25:48.997 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.9979ms
+2025-10-07 16:25:55.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - null null
+2025-10-07 16:25:55.840 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:25:55.862 +03:00 [INF] Route matched with {action = "GetBooksByAuthorId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByAuthorId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:25:56.926 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:25:56.944 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI) in 1078.3946ms
+2025-10-07 16:25:56.945 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:25:56.954 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - 200 null application/json; charset=utf-8 1128.2965ms
+2025-10-07 16:28:15.122 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:28:15.162 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:28:15.306 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:28:15.306 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:28:15.306 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:28:17.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:28:17.787 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 217.2682ms
+2025-10-07 16:28:17.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:28:17.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:28:17.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 9.2119ms
+2025-10-07 16:28:17.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.975ms
+2025-10-07 16:28:18.471 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:28:18.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3892ms
+2025-10-07 16:28:25.210 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - null null
+2025-10-07 16:28:25.218 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:28:25.238 +03:00 [INF] Route matched with {action = "GetBooksByAuthorId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByAuthorId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:28:26.337 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:28:26.351 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI) in 1110.1397ms
+2025-10-07 16:28:26.351 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByAuthorId (UdemyKutuphaneAPI)'
+2025-10-07 16:28:26.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByAuthorId?authorId=0 - 200 null application/json; charset=utf-8 1146.997ms
+2025-10-07 16:28:36.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/GetBooksByCategoryId?categoryId=0 - null null
+2025-10-07 16:28:36.697 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI)'
+2025-10-07 16:28:36.699 +03:00 [INF] Route matched with {action = "GetBooksByCategoryId", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBooksByCategoryId(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:28:36.760 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:28:36.760 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI) in 60.7064ms
+2025-10-07 16:28:36.760 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetBooksByCategoryId (UdemyKutuphaneAPI)'
+2025-10-07 16:28:36.760 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/GetBooksByCategoryId?categoryId=0 - 200 null application/json; charset=utf-8 65.5807ms
+2025-10-07 16:41:38.496 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:41:38.526 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:41:38.662 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:41:38.663 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:41:38.663 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:41:40.136 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:41:40.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 204.5882ms
+2025-10-07 16:41:40.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:41:40.369 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:41:40.380 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 11.2566ms
+2025-10-07 16:41:40.411 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.6713ms
+2025-10-07 16:41:41.087 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:41:41.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.952ms
+2025-10-07 16:41:51.374 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-07 16:41:51.383 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:41:51.399 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:41:53.162 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:41:53.181 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 1778.3837ms
+2025-10-07 16:41:53.181 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:41:53.188 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 1814.7575ms
+2025-10-07 16:42:21.415 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7062/api/Book/Update - application/json 129
+2025-10-07 16:42:21.421 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Update (UdemyKutuphaneAPI)'
+2025-10-07 16:42:21.427 +03:00 [INF] Route matched with {action = "Update", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(KutuphaneDataAccess.DTOs.BookUpdateDto) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:42:21.767 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneDataAccess.DTOs.BookUpdateDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-07 16:42:21.784 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Update (UdemyKutuphaneAPI) in 357.0579ms
+2025-10-07 16:42:21.784 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Update (UdemyKutuphaneAPI)'
+2025-10-07 16:42:21.785 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7062/api/Book/Update - 200 null application/json; charset=utf-8 369.7791ms
+2025-10-07 16:42:32.078 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-07 16:42:32.078 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:42:32.078 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-07 16:42:32.094 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 16:42:32.095 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 16.1579ms
+2025-10-07 16:42:32.095 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 16:42:32.095 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 17.6479ms
+2025-10-07 16:59:20.113 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 16:59:20.136 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 16:59:20.230 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 16:59:20.231 +03:00 [INF] Hosting environment: Development
+2025-10-07 16:59:20.231 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 16:59:21.028 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 16:59:21.236 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 216.6017ms
+2025-10-07 16:59:21.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 16:59:21.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.8341ms
+2025-10-07 16:59:21.267 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 16:59:21.306 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.2644ms
+2025-10-07 16:59:21.889 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 16:59:21.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2193ms
+2025-10-07 17:00:36.953 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 17:00:36.988 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 17:00:37.317 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 17:00:37.318 +03:00 [INF] Hosting environment: Development
+2025-10-07 17:00:37.318 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 17:00:37.561 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 17:00:37.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 238.82ms
+2025-10-07 17:00:37.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 17:00:37.827 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 17:00:37.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 7.2745ms
+2025-10-07 17:00:37.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.0848ms
+2025-10-07 17:00:38.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 17:00:38.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.4888ms
+2025-10-07 17:00:47.428 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7062/api/Category/Update - application/json 64
+2025-10-07 17:00:47.442 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:00:47.472 +03:00 [INF] Route matched with {action = "Update", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(KutuphaneDataAccess.DTOs.CategoryUpdateDto) on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-07 17:00:48.608 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-10-07 17:00:48.611 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI) in 1136.5213ms
+2025-10-07 17:00:48.612 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:00:48.619 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7062/api/Category/Update - 400 null text/plain; charset=utf-8 1190.8794ms
+2025-10-07 17:00:55.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-10-07 17:00:55.597 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 17:00:55.598 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-07 17:00:55.692 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.CategoryQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 17:00:55.701 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 102.1641ms
+2025-10-07 17:00:55.701 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 17:00:55.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 200 null application/json; charset=utf-8 106.3908ms
+2025-10-07 17:01:03.611 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7062/api/Category/Update - application/json 67
+2025-10-07 17:01:03.611 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:01:03.612 +03:00 [INF] Route matched with {action = "Update", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(KutuphaneDataAccess.DTOs.CategoryUpdateDto) on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-07 17:01:03.742 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneDataAccess.DTOs.CategoryUpdateDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-07 17:01:03.757 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI) in 145.761ms
+2025-10-07 17:01:03.758 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:01:03.758 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7062/api/Category/Update - 200 null application/json; charset=utf-8 146.9523ms
+2025-10-07 17:10:03.437 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-07 17:10:03.462 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-07 17:10:03.568 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-07 17:10:03.568 +03:00 [INF] Hosting environment: Development
+2025-10-07 17:10:03.568 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-07 17:10:04.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-07 17:10:04.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 211.5723ms
+2025-10-07 17:10:04.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-07 17:10:04.714 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.4139ms
+2025-10-07 17:10:04.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-07 17:10:04.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.5175ms
+2025-10-07 17:10:05.362 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-07 17:10:05.378 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.7865ms
+2025-10-07 17:10:10.881 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/ListAll - null null
+2025-10-07 17:10:10.892 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 17:10:10.914 +03:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-07 17:10:12.091 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-07 17:10:12.109 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI) in 1192.6203ms
+2025-10-07 17:10:12.110 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-07 17:10:12.117 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/ListAll - 200 null application/json; charset=utf-8 1235.5571ms
+2025-10-07 17:10:37.265 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7062/api/Author/Update - application/json 113
+2025-10-07 17:10:37.267 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:10:37.276 +03:00 [INF] Route matched with {action = "Update", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(KutuphaneCore.DTOs.AuthorUpdateDto) on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-07 17:10:37.580 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneCore.DTOs.AuthorUpdateDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-07 17:10:37.595 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.Update (UdemyKutuphaneAPI) in 319.2807ms
+2025-10-07 17:10:37.595 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Update (UdemyKutuphaneAPI)'
+2025-10-07 17:10:37.596 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7062/api/Author/Update - 200 null application/json; charset=utf-8 330.979ms

@@ -1,0 +1,375 @@
+2025-10-09 09:44:34.348 +03:00 [INF] User profile is available. Using 'C:\Users\zehra\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-09 09:44:34.755 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-09 09:44:34.756 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-09 09:44:34.873 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-09 09:44:34.874 +03:00 [INF] Hosting environment: Development
+2025-10-09 09:44:34.874 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-09 09:44:35.340 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-09 09:44:35.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 361.4462ms
+2025-10-09 09:44:35.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-09 09:44:35.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-09 09:44:35.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 5.2984ms
+2025-10-09 09:44:35.781 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.9028ms
+2025-10-09 09:44:36.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-09 09:44:36.344 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.2598ms
+2025-10-09 09:46:29.487 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/User/Login - application/json 77
+2025-10-09 09:46:29.502 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:46:29.528 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(KutuphaneDataAccess.DTOs.UserLoginDto) on controller UdemyKutuphaneAPI.Controllers.UserController (UdemyKutuphaneAPI).
+2025-10-09 09:46:31.703 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__user_Username_0='?' (Size = 4000), @__user_Email_1='?' (Size = 4000), @__HashedPassword_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[RecordDate], [u].[Surname], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__user_Username_0 OR [u].[Email] = @__user_Email_1) AND [u].[Password] = @__HashedPassword_2
+2025-10-09 09:46:31.747 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:46:31.753 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI) in 2223.131ms
+2025-10-09 09:46:31.754 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:46:31.760 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/User/Login - 200 null application/json; charset=utf-8 2274.5096ms
+2025-10-09 09:46:57.359 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-09 09:46:57.411 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:46:57.413 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:46:57.541 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+2025-10-09 09:46:57.555 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:46:57.562 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 149.0387ms
+2025-10-09 09:46:57.562 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:46:57.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 203.6338ms
+2025-10-09 09:48:24.452 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=1 - null null
+2025-10-09 09:48:24.462 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:24.473 +03:00 [INF] Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:24.538 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2025-10-09 09:48:24.631 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:48:24.636 +03:00 [INF] Kitap silindi: string
+2025-10-09 09:48:24.636 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Book, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:48:24.638 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI) in 164.0211ms
+2025-10-09 09:48:24.638 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:24.638 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=1 - 200 null application/json; charset=utf-8 185.7834ms
+2025-10-09 09:48:31.749 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=2 - null null
+2025-10-09 09:48:31.750 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:31.750 +03:00 [INF] Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:31.760 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2025-10-09 09:48:31.762 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:48:31.762 +03:00 [INF] Kitap silindi: mai ve siyah
+2025-10-09 09:48:31.762 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Book, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:48:31.762 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI) in 12.4664ms
+2025-10-09 09:48:31.762 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:31.762 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=2 - 200 null application/json; charset=utf-8 13.882ms
+2025-10-09 09:48:41.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-09 09:48:41.336 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:48:41.336 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:41.337 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+2025-10-09 09:48:41.338 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:48:41.338 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 2.4317ms
+2025-10-09 09:48:41.338 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:48:41.338 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 4.1357ms
+2025-10-09 09:48:48.808 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=1002 - null null
+2025-10-09 09:48:48.809 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:48.809 +03:00 [INF] Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:48.811 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2025-10-09 09:48:48.815 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:48:48.815 +03:00 [INF] Kitap silindi: strin852456g
+2025-10-09 09:48:48.816 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Book, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:48:48.816 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI) in 7.1009ms
+2025-10-09 09:48:48.816 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:48.816 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=1002 - 200 null application/json; charset=utf-8 8.1003ms
+2025-10-09 09:48:52.040 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=2002 - null null
+2025-10-09 09:48:52.040 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:52.040 +03:00 [INF] Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:52.042 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2025-10-09 09:48:52.047 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:48:52.047 +03:00 [INF] Kitap silindi: string
+2025-10-09 09:48:52.047 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Book, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:48:52.048 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI) in 7.5141ms
+2025-10-09 09:48:52.048 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:52.048 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=2002 - 200 null application/json; charset=utf-8 8.8267ms
+2025-10-09 09:48:55.635 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=3002 - null null
+2025-10-09 09:48:55.635 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:55.635 +03:00 [INF] Route matched with {action = "Delete", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:48:55.637 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__p_0
+2025-10-09 09:48:55.638 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Books]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:48:55.639 +03:00 [INF] Kitap silindi: araba sevdası
+2025-10-09 09:48:55.639 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Book, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:48:55.639 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI) in 3.6287ms
+2025-10-09 09:48:55.639 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:48:55.639 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Book/Delete?id=3002 - 200 null application/json; charset=utf-8 4.3808ms
+2025-10-09 09:49:14.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-09 09:49:14.041 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:49:14.041 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:49:14.042 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+2025-10-09 09:49:14.042 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-09 09:49:14.042 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 1.5136ms
+2025-10-09 09:49:14.042 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:49:14.042 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 404 null text/plain; charset=utf-8 2.1973ms
+2025-10-09 09:49:27.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/ListAll - null null
+2025-10-09 09:49:27.745 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:49:27.746 +03:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:49:27.754 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+2025-10-09 09:49:27.758 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:49:27.760 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI) in 13.8693ms
+2025-10-09 09:49:27.760 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:49:27.760 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/ListAll - 200 null application/json; charset=utf-8 17.8039ms
+2025-10-09 09:49:39.581 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Author/Delete?id=3003 - null null
+2025-10-09 09:49:39.586 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:49:39.587 +03:00 [INF] Route matched with {action = "Delete", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:49:39.595 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-10-09 09:49:39.619 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:49:39.620 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.Entities.Author, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:49:39.621 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.Delete (UdemyKutuphaneAPI) in 33.686ms
+2025-10-09 09:49:39.621 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:49:39.621 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Author/Delete?id=3003 - 200 null application/json; charset=utf-8 40.0756ms
+2025-10-09 09:50:26.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-10-09 09:50:26.186 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:50:26.188 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-10-09 09:50:26.189 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[RecordDate], [b].[Title]
+FROM [Books] AS [b]
+2025-10-09 09:50:26.189 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-09 09:50:26.189 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 1.5123ms
+2025-10-09 09:50:26.189 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:50:26.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 404 null text/plain; charset=utf-8 8.507ms
+2025-10-09 09:50:33.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-10-09 09:50:33.557 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:50:33.558 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:50:33.573 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+2025-10-09 09:50:33.577 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.CategoryQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:50:33.580 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 21.8978ms
+2025-10-09 09:50:33.580 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:50:33.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 200 null application/json; charset=utf-8 24.2055ms
+2025-10-09 09:50:43.023 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7062/api/Category/Delete?id=1002 - null null
+2025-10-09 09:50:43.025 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:50:43.029 +03:00 [INF] Route matched with {action = "Delete", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:50:43.041 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+WHERE [c].[Id] = @__p_0
+2025-10-09 09:50:43.065 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Categories]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-10-09 09:50:43.065 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneDataAccess.DTOs.CategoryQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:50:43.066 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.Delete (UdemyKutuphaneAPI) in 37.57ms
+2025-10-09 09:50:43.066 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Delete (UdemyKutuphaneAPI)'
+2025-10-09 09:50:43.066 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7062/api/Category/Delete?id=1002 - 200 null application/json; charset=utf-8 44.0978ms
+2025-10-09 09:51:20.049 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/ListAll - null null
+2025-10-09 09:51:20.050 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:51:20.050 +03:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:51:20.053 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+2025-10-09 09:51:20.053 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:51:20.053 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI) in 2.4891ms
+2025-10-09 09:51:20.053 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:51:20.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/ListAll - 200 null application/json; charset=utf-8 4.5843ms
+2025-10-09 09:52:48.457 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/Author/Create - application/json 102
+2025-10-09 09:52:48.473 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:52:48'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-09 09:52:48.512 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:52:48'.
+2025-10-09 09:52:48.513 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-09 09:52:48.517 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-09 09:52:48.517 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/Author/Create - 401 0 null 60.6334ms
+2025-10-09 09:53:30.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - null null
+2025-10-09 09:53:30.618 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:53:30'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-09 09:53:30.618 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:53:30'.
+2025-10-09 09:53:30.619 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-09 09:53:30.619 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-09 09:53:30.619 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - 401 0 null 11.1093ms
+2025-10-09 09:53:38.759 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/User/Login - application/json 77
+2025-10-09 09:53:38.761 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:53:38'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-10-09 09:53:38.761 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '9.10.2025 06:47:31', Current time (UTC): '9.10.2025 06:53:38'.
+2025-10-09 09:53:38.761 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:53:38.761 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(KutuphaneDataAccess.DTOs.UserLoginDto) on controller UdemyKutuphaneAPI.Controllers.UserController (UdemyKutuphaneAPI).
+2025-10-09 09:53:38.765 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Username_0='?' (Size = 4000), @__user_Email_1='?' (Size = 4000), @__HashedPassword_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[RecordDate], [u].[Surname], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__user_Username_0 OR [u].[Email] = @__user_Email_1) AND [u].[Password] = @__HashedPassword_2
+2025-10-09 09:53:38.765 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:53:38.765 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI) in 3.7309ms
+2025-10-09 09:53:38.765 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:53:38.765 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/User/Login - 200 null application/json; charset=utf-8 6.1748ms
+2025-10-09 09:54:05.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - null null
+2025-10-09 09:54:05.154 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI)'
+2025-10-09 09:54:05.157 +03:00 [INF] Route matched with {action = "GetById", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:54:05.160 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-10-09 09:54:05.168 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:54:05.170 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI) in 12.9775ms
+2025-10-09 09:54:05.170 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI)'
+2025-10-09 09:54:05.170 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - 200 null application/json; charset=utf-8 21.0074ms
+2025-10-09 09:54:44.368 +03:00 [INF] User profile is available. Using 'C:\Users\zehra\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-09 09:54:44.655 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-09 09:54:44.656 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-09 09:54:44.756 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-09 09:54:44.756 +03:00 [INF] Hosting environment: Development
+2025-10-09 09:54:44.756 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-09 09:54:45.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-09 09:54:45.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 265.7325ms
+2025-10-09 09:54:45.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-09 09:54:45.289 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-09 09:54:45.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 6.1842ms
+2025-10-09 09:54:45.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.9684ms
+2025-10-09 09:54:45.818 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-09 09:54:45.835 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.8431ms
+2025-10-09 09:55:07.878 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/User/Login - application/json 77
+2025-10-09 09:55:07.887 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:55:07.905 +03:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LoginUser(KutuphaneDataAccess.DTOs.UserLoginDto) on controller UdemyKutuphaneAPI.Controllers.UserController (UdemyKutuphaneAPI).
+2025-10-09 09:55:08.922 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@__user_Username_0='?' (Size = 4000), @__user_Email_1='?' (Size = 4000), @__HashedPassword_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[RecordDate], [u].[Surname], [u].[Username]
+FROM [Users] AS [u]
+WHERE ([u].[Username] = @__user_Username_0 OR [u].[Email] = @__user_Email_1) AND [u].[Password] = @__HashedPassword_2
+2025-10-09 09:55:08.959 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:55:08.965 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI) in 1057.468ms
+2025-10-09 09:55:08.965 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.UserController.LoginUser (UdemyKutuphaneAPI)'
+2025-10-09 09:55:08.971 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/User/Login - 200 null application/json; charset=utf-8 1093.1464ms
+2025-10-09 09:55:46.635 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - null null
+2025-10-09 09:55:46.671 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI)'
+2025-10-09 09:55:46.673 +03:00 [INF] Route matched with {action = "GetById", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:55:46.821 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-10-09 09:55:46.867 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:55:46.872 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI) in 198.9329ms
+2025-10-09 09:55:46.872 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetById (UdemyKutuphaneAPI)'
+2025-10-09 09:55:46.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/GetById?id=1 - 200 null application/json; charset=utf-8 237.5353ms
+2025-10-09 09:56:18.755 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/Author/Create - application/json 102
+2025-10-09 09:56:18.758 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Create (UdemyKutuphaneAPI)'
+2025-10-09 09:56:18.759 +03:00 [INF] Route matched with {action = "Create", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(KutuphaneCore.DTOs.AuthorCreateDto) on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-10-09 09:56:18.846 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Name], [PlaceOfBirth], [RecordDate], [Surname], [YearOfBirth])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-10-09 09:56:18.861 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneCore.Entities.Author, KutuphaneCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:56:18.877 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.Create (UdemyKutuphaneAPI) in 117.1505ms
+2025-10-09 09:56:18.877 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.Create (UdemyKutuphaneAPI)'
+2025-10-09 09:56:18.877 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/Author/Create - 200 null application/json; charset=utf-8 121.9536ms
+2025-10-09 09:57:32.427 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-10-09 09:57:32.434 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:57:32.435 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:57:32.443 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+2025-10-09 09:57:32.453 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-09 09:57:32.453 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 17.5713ms
+2025-10-09 09:57:32.453 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:57:32.453 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 404 null text/plain; charset=utf-8 27.1206ms
+2025-10-09 09:57:38.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-10-09 09:57:38.014 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:57:38.014 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:57:38.017 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+2025-10-09 09:57:38.018 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-10-09 09:57:38.018 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 4.1189ms
+2025-10-09 09:57:38.018 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:57:38.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 404 null text/plain; charset=utf-8 7.0242ms
+2025-10-09 09:58:08.194 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7062/api/Category/Create - application/json 64
+2025-10-09 09:58:08.198 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Create (UdemyKutuphaneAPI)'
+2025-10-09 09:58:08.200 +03:00 [INF] Route matched with {action = "Create", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(KutuphaneDataAccess.DTOs.CategoryCreateDto) on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:58:08.217 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Categories] ([Description], [Name], [RecordDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-09 09:58:08.218 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Threading.Tasks.Task`1[[kutuphaneServis.Interfaces.IResponse`1[[KutuphaneDataAccess.DTOs.CategoryCreateDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], kutuphaneServis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-09 09:58:08.221 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.Create (UdemyKutuphaneAPI) in 20.4307ms
+2025-10-09 09:58:08.221 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.Create (UdemyKutuphaneAPI)'
+2025-10-09 09:58:08.221 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7062/api/Category/Create - 200 null application/json; charset=utf-8 27.4717ms
+2025-10-09 09:58:16.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-10-09 09:58:16.344 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:58:16.344 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-10-09 09:58:16.345 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+2025-10-09 09:58:16.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.CategoryQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-09 09:58:16.349 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 4.8075ms
+2025-10-09 09:58:16.349 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-10-09 09:58:16.349 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 200 null application/json; charset=utf-8 5.7612ms
+2025-10-09 10:08:46.625 +03:00 [INF] User profile is available. Using 'C:\Users\zehra\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-09 10:08:46.830 +03:00 [INF] Now listening on: https://localhost:7062
+2025-10-09 10:08:46.830 +03:00 [INF] Now listening on: http://localhost:5015
+2025-10-09 10:08:46.899 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-09 10:08:46.900 +03:00 [INF] Hosting environment: Development
+2025-10-09 10:08:46.900 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-10-09 10:08:47.360 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-10-09 10:08:47.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 270.4034ms
+2025-10-09 10:08:47.656 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-10-09 10:08:47.656 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-09 10:08:47.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.5622ms
+2025-10-09 10:08:47.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.1945ms
+2025-10-09 10:08:48.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-10-09 10:08:48.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3125ms

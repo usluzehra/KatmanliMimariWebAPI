@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kutuphaneServis", "..\kutuphaneServis\kutuphaneServis.csproj", "{8775E0E3-62FD-46FF-894A-264CCF772BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneDataAccess", "..\KutuphaneDataAccess\KutuphaneDataAccess.csproj", "{BF1B0286-1BD1-44B4-B118-051031C82CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneCore", "..\KutuphaneCore\KutuphaneCore.csproj", "{0A6FAC0F-14E6-434C-B66C-401C357A8FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyKutuphaneAPI", "UdemyKutuphaneApi\UdemyKutuphaneAPI.csproj", "{C341CBB8-0FB6-FDC6-1299-B8A9C0CA8706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8775E0E3-62FD-46FF-894A-264CCF772BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8775E0E3-62FD-46FF-894A-264CCF772BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8775E0E3-62FD-46FF-894A-264CCF772BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8775E0E3-62FD-46FF-894A-264CCF772BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1B0286-1BD1-44B4-B118-051031C82CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1B0286-1BD1-44B4-B118-051031C82CD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1B0286-1BD1-44B4-B118-051031C82CD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1B0286-1BD1-44B4-B118-051031C82CD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A6FAC0F-14E6-434C-B66C-401C357A8FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A6FAC0F-14E6-434C-B66C-401C357A8FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A6FAC0F-14E6-434C-B66C-401C357A8FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A6FAC0F-14E6-434C-B66C-401C357A8FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C341CBB8-0FB6-FDC6-1299-B8A9C0CA8706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C341CBB8-0FB6-FDC6-1299-B8A9C0CA8706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C341CBB8-0FB6-FDC6-1299-B8A9C0CA8706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C341CBB8-0FB6-FDC6-1299-B8A9C0CA8706}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB976447-2E9F-458E-AD18-8444CBE63606}
+	EndGlobalSection
+EndGlobal
