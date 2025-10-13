@@ -47,7 +47,15 @@ namespace kutuphaneServis.Services
 
             };
 
-            _bookRepository.Create(book);
+                //daha önce eklenmiş mi diye kontrol edelim
+                var existingBook = _bookRepository.GetAll().FirstOrDefault(b => b.Title.ToLower() == book.Title.ToLower() && b.AuthorId == book.AuthorId);
+                if (existingBook != null)
+                {
+                    _logger.LogWarning("Aynı isimde ve yazara sahip bir kitap zaten mevcut: {Title}", book.Title);
+                    return Task.FromResult<IResponse<BookCreateDto>>(ResponseGeneric<BookCreateDto>.Error("Aynı isimde ve yazara sahip bir kitap zaten mevcut"));
+                }
+
+                _bookRepository.Create(book);
 
                 _logger.LogInformation($"Yeni kitap oluşturuldu:" ,book.Title);
 

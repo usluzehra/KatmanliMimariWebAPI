@@ -1,6 +1,7 @@
 ﻿using KutuphaneCore.Entities;
 using KutuphaneDataAccess.DTOs;
 using KutuphaneDataAccess.Repository;
+using kutuphaneServis.Helpers.ZLog;
 using kutuphaneServis.Interfaces;
 using kutuphaneServis.Response;
 using kutuphaneServis.ResponseGeneric;
@@ -23,22 +24,26 @@ namespace kutuphaneServis.Services
         // DI ile GenericRepositoryi alıyoruz 
         private readonly IGenericRepository<User> _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly IZLogger _zLogger;
 
-        public UserService(IGenericRepository<User> userRepository, IConfiguration configuration)
+        public UserService(IGenericRepository<User> userRepository, IConfiguration configuration, IZLogger zLogger)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _zLogger = zLogger;
         }
         public IResponse<UserCreateDto> CreateUser(UserCreateDto user)
         {
             if (user == null)
             {
-               ResponseGeneric<UserCreateDto>.Error("Kullanıcı bilgileri boş olamaz.");
+                _zLogger.Error("Kullanıcı bilgileri boş olamaz.");
+                ResponseGeneric<UserCreateDto>.Error("Kullanıcı bilgileri boş olamaz.");
             }
             //kullanıcı adı veya şifre boş olamaz
 
             if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Email))
             {
+                _zLogger.Error("Kullanıcı adı veya email boş olamaz.");
                 return ResponseGeneric<UserCreateDto>.Error("Kullanıcı adı veya email boş olamaz.");
             }
 
@@ -47,6 +52,7 @@ namespace kutuphaneServis.Services
             
             if(existingUser != null)
             {
+                _zLogger.Error("Bu kullanıcı adı veya eposta zaten var.");
                 return ResponseGeneric<UserCreateDto>.Error("Bu kullanıcı adı veya eposta zaten var.");
             }
 
@@ -65,6 +71,7 @@ namespace kutuphaneServis.Services
             };
             newUser.RecordDate = DateTime.Now;
             _userRepository.Create(newUser);
+            _zLogger.Info($"Yeni kullanıcı oluşturuldu: {newUser.Username}");
             return ResponseGeneric<UserCreateDto>.Success(null,"Kullanıcı kaydı başarıyla oluşturuldu.");
         }
 
@@ -72,6 +79,7 @@ namespace kutuphaneServis.Services
         {
             if ((user.Username == null || user.Email== null) && user.Password==null)
             {
+                _zLogger.Error("Kullanıcı bilgileri boş olamaz.");
                 return ResponseGeneric<string>.Error("Kullanıcı bilgileri boş olamaz.");
             }
           var checkUser=  _userRepository.GetAll().FirstOrDefault(x => (x.Username == user.Username || x.Email == user.Email) && x.Password == HashedPassword(user.Password));
@@ -79,10 +87,12 @@ namespace kutuphaneServis.Services
 
             if (checkUser == null)
             {
+                _zLogger.Error("Kullanıcı adı veya şifre hatalı.");
                 return ResponseGeneric<string>.Error("Kullanıcı adı veya şifre hatalı.");
             }
 
             var generatedToken = GenerateJwtToken(checkUser);
+            _zLogger.Info($"Kullanıcı girişi başarılı: {checkUser.Username}");
             return ResponseGeneric<string>.Success(generatedToken, "Giriş başarılı.");
         }
 

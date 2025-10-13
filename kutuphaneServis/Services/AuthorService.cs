@@ -3,6 +3,7 @@ using KutuphaneCore.DTOs;
 using KutuphaneCore.Entities;
 using KutuphaneDataAccess.DTOs;
 using KutuphaneDataAccess.Repository;
+using kutuphaneServis.Helpers.ZLog;
 using kutuphaneServis.Interfaces;
 using kutuphaneServis.Response;
 using kutuphaneServis.ResponseGeneric;
@@ -24,11 +25,13 @@ namespace kutuphaneServis.Services
         // DI ile GenericRepositoryi alıyoruz 
         private readonly IGenericRepository<Author> _authorRepository;
         private readonly IMapper _mapper;
+        private readonly IZLogger _zLogger;
 
-        public AuthorService(IGenericRepository<Author> authorRepository, IMapper mapper)
+        public AuthorService(IGenericRepository<Author> authorRepository, IMapper mapper, IZLogger zLogger)
         {
             _authorRepository = authorRepository;
             _mapper = mapper;
+            _zLogger = zLogger;
         }
 
      
@@ -38,7 +41,8 @@ namespace kutuphaneServis.Services
             {
                  if(authorCreateDto == null)
                  {
-                      return Task.FromResult<IResponse<Author>>(ResponseGeneric<Author>.Error("Yazar bilgileri boş olamaz."));
+                    _zLogger.Error("Yazar bilgileri boş olamaz.");
+                    return Task.FromResult<IResponse<Author>>(ResponseGeneric<Author>.Error("Yazar bilgileri boş olamaz."));
               
                  }
                 var newAuthor = _mapper.Map<Author>(authorCreateDto);
@@ -47,11 +51,14 @@ namespace kutuphaneServis.Services
 
                  _authorRepository.Create(newAuthor);
 
+                    _zLogger.Info($"Yeni yazar oluşturuldu: {newAuthor.Name} {newAuthor.Surname}");
+
                 return Task.FromResult<IResponse<Author>>(ResponseGeneric<Author>.Success(null, "Yazar başarıyla oluşturuldu."));
             }
-            catch
+            catch(Exception ex)
             {
-                return Task.FromResult<IResponse<Author>>(ResponseGeneric<Author>.Error("Bir hata oluştu."));
+                _zLogger.Error(ex,"Yazar oluşturulurken bir hata oluştu.");
+                return Task.FromResult<IResponse<Author>>(ResponseGeneric<Author>.Error(ex.Message));
             }           
            
         }
@@ -66,16 +73,20 @@ namespace kutuphaneServis.Services
 
                     if (author == null)
                     {
-                        return ResponseGeneric<Author>.Error("Yazar bulunamadı.");
+                        _zLogger.Warn("Silinecek yazar bulunamadı.");
+                    return ResponseGeneric<Author>.Error("Yazar bulunamadı.");
                     }
                     // Entity varsa sil
                     _authorRepository.Delete(author);
-
-                    return ResponseGeneric<Author>.Success(null, "Yazar başarıyla silindi.");
+                    _zLogger.Info($"Yazar silindi: {author.Name} {author.Surname}");
+                return ResponseGeneric<Author>.Success(null, "Yazar başarıyla silindi.");
             }
-            catch
+            catch(Exception ex)
             {
-                return ResponseGeneric<Author>.Error("Bir hata oluştu.");
+                _zLogger.Error(ex, "Yazar silinirken bir hata oluştu.");
+                {
+                    return ResponseGeneric<Author>.Error(ex.Message);
+                }
             }        
         }
 
@@ -87,13 +98,18 @@ namespace kutuphaneServis.Services
                 var authorQuaryDto = _mapper.Map<AuthorQuaryDto>(author);
                 if (author == null)
                {
-                 return ResponseGeneric<AuthorQuaryDto>.Error("Yazar bulunamadı.");
+                    _zLogger.Warn("Yazar bulunamadı.");
+                    return ResponseGeneric<AuthorQuaryDto>.Error("Yazar bulunamadı.");
                }
-               return ResponseGeneric<AuthorQuaryDto>.Success(authorQuaryDto, "Yazar başarıyla bulundu.");
+                _zLogger.Info($"Yazar bulundu: {author.Name} {author.Surname}");
+                return ResponseGeneric<AuthorQuaryDto>.Success(authorQuaryDto, "Yazar başarıyla bulundu.");
             }
-            catch
+            catch(Exception ex)
             {
-                return ResponseGeneric<AuthorQuaryDto>.Error("Bir hata oluştu.");
+                _zLogger.Error(ex, "Yazar getirilirken bir hata oluştu.");
+                {
+                    return ResponseGeneric<AuthorQuaryDto>.Error(ex.Message);
+                }
             }
         }
 
@@ -106,14 +122,17 @@ namespace kutuphaneServis.Services
 
                 if (authorQuaryDtos == null || authorQuaryDtos.ToList().Count ==0)
                 {
+                    _zLogger.Warn("İsimle yazar bulunamadı.");
                     return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Error("yazar bulunamadı");
                 }
-
-              return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Success(authorQuaryDtos, "yazar başarıyla bulundu.");
+                _zLogger.Info($"İsimle yazar bulundu: {name}");
+                return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Success(authorQuaryDtos, "yazar başarıyla bulundu.");
             }
-            catch
+            catch(Exception ex)
             {
-                return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Error("Bir hata oluştu");
+                _zLogger.Error(ex, "İsimle yazar getirilirken bir hata oluştu.");
+
+                return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Error(ex.Message);
             }
             
         }
@@ -127,14 +146,17 @@ namespace kutuphaneServis.Services
 
                 if (allAuthors == null || allAuthors.Count == 0)
                 {
+                    _zLogger.Warn("Yazarlar bulunamadı.");
                     return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Error("yazarlar bulunamadı");
                 }
 
+                _zLogger.Info("Tüm yazarlar listelendi.");
                 return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Success(authorQueryDtos, "yazarlar bulundu");
 
             }
             catch (Exception ex)
             {
+                _zLogger.Error(ex, "Yazarlar getirilirken bir hata oluştu.");
                 return ResponseGeneric<IEnumerable<AuthorQuaryDto>>.Error(ex.Message);
             }
 
@@ -148,6 +170,7 @@ namespace kutuphaneServis.Services
                 var authorEntity = _authorRepository.GetByIdAsync(authorUpdateDto.Id).Result;
                 if (authorEntity == null)
                 {
+                    _zLogger.Warn("Güncellenecek yazar bulunamadı.");
                     return Task.FromResult<IResponse<AuthorUpdateDto>>(ResponseGeneric<AuthorUpdateDto>.Error("Yazar bulunamadı."));
                 }
                 //var olan entityi güncelle
@@ -168,11 +191,14 @@ namespace kutuphaneServis.Services
                     authorEntity.YearOfBirth = authorUpdateDto.YearOfBirth.Value;
                 }
                 _authorRepository.Update(authorEntity);
+                _zLogger.Info($"Yazar güncellendi: {authorEntity.Name} {authorEntity.Surname}");
                 return Task.FromResult<IResponse<AuthorUpdateDto>>(ResponseGeneric<AuthorUpdateDto>.Success(null, "Yazar başarıyla güncellendi."));     
             }
-            catch
+            catch(Exception ex)
             {
-                return Task.FromResult<IResponse<AuthorUpdateDto>>(ResponseGeneric<AuthorUpdateDto>.Error("Bir hata oluştu."));
+                _zLogger.Error(ex, "Yazar güncellenirken bir hata oluştu.");
+                
+                return Task.FromResult<IResponse<AuthorUpdateDto>>(ResponseGeneric<AuthorUpdateDto>.Error(ex.Message));
             }
             
 

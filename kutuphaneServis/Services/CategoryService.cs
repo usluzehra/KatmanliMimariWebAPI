@@ -2,6 +2,7 @@
 using KutuphaneCore.Entities;
 using KutuphaneDataAccess.DTOs;
 using KutuphaneDataAccess.Repository;
+using kutuphaneServis.Helpers.ZLog;
 using kutuphaneServis.Interfaces;
 using kutuphaneServis.Response;
 using kutuphaneServis.ResponseGeneric;
@@ -18,12 +19,14 @@ namespace kutuphaneServis.Services
     {
         private readonly IGenericRepository<Category> _categoryRepository;
         private readonly IMapper _mapper;
+        private readonly IZLogger _zLogger;
 
 
-        public CategoryService(IGenericRepository<Category> categoryRepository, IMapper mapper)
+        public CategoryService(IGenericRepository<Category> categoryRepository, IMapper mapper, IZLogger zLogger)
         {
             _categoryRepository = categoryRepository;
             _mapper = mapper;
+            _zLogger = zLogger;
         }
         public async Task<IResponse<CategoryCreateDto>> Create(CategoryCreateDto categoryCreateDto)
         {
@@ -31,19 +34,28 @@ namespace kutuphaneServis.Services
             {
                 if (categoryCreateDto == null)
                 {
+                    _zLogger.Error("kategori bilgileri boş olamaz");
                     return ResponseGeneric<CategoryCreateDto>.Error("kategori bilgileri boş olamaz");
                 }
 
                 //DTOyu entitye maple
                 var categoryEntity = new Category{ Name = categoryCreateDto.Name,Description = categoryCreateDto.Description };
                 categoryEntity.RecordDate = DateTime.Now;
-
+                //aynı isimde kategori var mı kontrol et
+                var existingCategory = _categoryRepository.GetAll().FirstOrDefault(c => c.Name.ToLower() == categoryEntity.Name.ToLower());
+                if (existingCategory != null)
+                {
+                    _zLogger.Error("Aynı isimde bir kategori zaten mevcut");
+                    return ResponseGeneric<CategoryCreateDto>.Error("Aynı isimde bir kategori zaten mevcut");
+                }
                 _categoryRepository.Create(categoryEntity);
+                _zLogger.Info($"Yeni kategori oluşturuldu: {categoryEntity.Name}");
                 return ResponseGeneric<CategoryCreateDto>.Success(null, "kategori başarıyla oluşturuldu.");
             }
-            catch
+            catch(Exception ex)
             {
-                return ResponseGeneric<CategoryCreateDto>.Error("Bir hata oluştu");
+                _zLogger.Error(ex, "Kategori oluşturulurken bir hata oluştu");
+                return ResponseGeneric<CategoryCreateDto>.Error(ex.Message);
             }
             
             
@@ -58,14 +70,17 @@ namespace kutuphaneServis.Services
 
             if(category==null)
             {
-                return ResponseGeneric<CategoryQuaryDto>.Error("kategori bulunamadı");
+                _zLogger.Error("kategori bulunamadı");
+                    return ResponseGeneric<CategoryQuaryDto>.Error("kategori bulunamadı");
             }
             _categoryRepository.Delete(category);
-            return ResponseGeneric<CategoryQuaryDto>.Success(null,"kategori başarıyla silindi");
+                _zLogger.Info($"kategori silindi: {category.Name}");
+                return ResponseGeneric<CategoryQuaryDto>.Success(null,"kategori başarıyla silindi");
             }
-            catch
+            catch(Exception ex)
             {
-                return ResponseGeneric<CategoryQuaryDto>.Error("Bir hata oluştu.");
+                _zLogger.Error(ex, "Kategori silinirken bir hata oluştu");
+                return ResponseGeneric<CategoryQuaryDto>.Error(ex.Message);
             }
         }
 
@@ -79,13 +94,17 @@ namespace kutuphaneServis.Services
 
                 if ( categoryDto ==null)
             {
-                return ResponseGeneric<CategoryQuaryDto>.Success(null,"kategori bulunamadı");
+                _zLogger.Warn("kategori bulunamadı");
+                    return ResponseGeneric<CategoryQuaryDto>.Success(null,"kategori bulunamadı");
             }
+                _zLogger.Info($"kategori bulundu: {category.Name}");
 
-            return ResponseGeneric<CategoryQuaryDto>.Success(categoryDto,"kategori bulundu.");
+                return ResponseGeneric<CategoryQuaryDto>.Success(categoryDto,"kategori bulundu.");
             }
-            catch
+            catch(Exception ex)
             {
+                _zLogger.Error(ex, "Kategori getirilirken bir hata oluştu");
+                
                 return ResponseGeneric<CategoryQuaryDto>.Error("Bir hata oluştu");
             }
         }
@@ -99,13 +118,16 @@ namespace kutuphaneServis.Services
 
                 if (categoryDtos == null || categories.Count == 0)
                 {
+                    _zLogger.Warn("kategori bulunamadı");
                     return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Error("kategori bulunamadı");
                 }
 
+                _zLogger.Info($"kategori bulundu: {name}");
                 return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Success(categoryDtos, "kategori Başarıyla bulundu");
             }
-            catch
+            catch(Exception ex)
             {
+                _zLogger.Error(ex,"Bir hata oluştu");
                 return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Error("Bir hata oluştu");
             }
             }
@@ -120,14 +142,18 @@ namespace kutuphaneServis.Services
 
             if( categoryDtos==null || categoryDtos.ToList().Count==0)
             {
-                return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Error("kategori bulunamadı");
+                    _zLogger.Warn("kategori bulunamadı");
+                    return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Error("kategori bulunamadı");
             }
+                _zLogger.Info("Tüm kategoriler listelendi");
 
-            return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Success(categoryDtos, "kategoriler döndürüldü");
+                return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Success(categoryDtos, "kategoriler döndürüldü");
 
             }
-            catch
+            catch(Exception ex)
             {
+                _zLogger.Error(ex, "Bir hata oluştu");
+                
                 return ResponseGeneric<IEnumerable<CategoryQuaryDto>>.Error("Bir hata oluştu.");
             }
            
@@ -142,6 +168,7 @@ namespace kutuphaneServis.Services
                 // category var mı?
                 if (categoryEntity == null)
                 {
+                    _zLogger.Warn("kategori bulunamadı");
                     return Task.FromResult<IResponse<CategoryUpdateDto>>(ResponseGeneric<CategoryUpdateDto>.Error("kategori bulunamadı"));
                 }
 
@@ -155,10 +182,12 @@ namespace kutuphaneServis.Services
                     categoryEntity.Description = categoryUpdateDto.Description;
                 }
                 _categoryRepository.Update(categoryEntity);
+                _zLogger.Info($"kategori güncellendi: {categoryEntity.Name}");
                 return Task.FromResult<IResponse<CategoryUpdateDto>>(ResponseGeneric<CategoryUpdateDto>.Success(null, "Kitap başarıyla güncellendi"));
             }
-            catch
+            catch(Exception ex)
             {
+                _zLogger.Error(ex, "Kategori güncellenirken bir hata oluştu");
                 return Task.FromResult<IResponse<CategoryUpdateDto>>(ResponseGeneric<CategoryUpdateDto>.Error("Bir hata oluştu"));
             }
         }

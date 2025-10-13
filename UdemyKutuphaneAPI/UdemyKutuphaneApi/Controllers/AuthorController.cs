@@ -23,7 +23,7 @@ namespace UdemyKutuphaneAPI.Controllers
 
 
 
-        s
+        
         [AllowAnonymous]
         [HttpGet("ListAll")]
         public IActionResult GetAll()
