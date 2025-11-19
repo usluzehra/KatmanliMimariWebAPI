@@ -1,0 +1,153 @@
+2025-11-13 09:11:32 [Info] Tüm kategoriler listelendi
+2025-11-13 09:11:32 [Error] Yazarlar getirilirken bir hata oluştu.
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.AuthorService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\AuthorService.cs:line 153
+2025-11-13 09:11:45 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-13 09:11:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:11:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:11:49 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:12:03 [Info] Tüm kategoriler listelendi
+2025-11-13 09:12:06 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:12:06 [Info] Tüm kategoriler listelendi
+2025-11-13 09:12:56 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:12:56 [Info] Tüm kategoriler listelendi
+2025-11-13 09:13:33 [Info] Tüm kategoriler listelendi
+2025-11-13 09:13:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:13:34 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:45 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:45 [Info] Tüm kategoriler listelendi
+2025-11-13 09:25:58 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:25:58 [Info] Tüm kategoriler listelendi
+2025-11-13 09:26:11 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:26:11 [Info] Tüm kategoriler listelendi
+2025-11-13 09:26:17 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:26:17 [Info] Tüm kategoriler listelendi
+2025-11-13 09:26:20 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:26:20 [Info] Tüm kategoriler listelendi
+2025-11-13 09:26:44 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:26:44 [Info] Tüm kategoriler listelendi
+2025-11-13 09:26:53 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:26:53 [Info] Tüm kategoriler listelendi
+2025-11-13 09:45:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:45:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:45:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:45:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:45:34 [Info] Tüm yazarlar listelendi.
+2025-11-13 09:45:34 [Info] Tüm kategoriler listelendi
+2025-11-13 09:45:34 [Info] Tüm kategoriler listelendi
+2025-11-13 09:45:34 [Info] Tüm kategoriler listelendi
+2025-11-13 09:45:34 [Info] Tüm kategoriler listelendi
+2025-11-13 09:45:34 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:13 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-13 14:20:13 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:20:13 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:14 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:15 [Error] Yazarlar getirilirken bir hata oluştu.
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.AuthorService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\AuthorService.cs:line 153
+2025-11-13 14:20:18 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:20:18 [Error] Bir hata oluştu
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.CategoryService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\CategoryService.cs:line 148
+2025-11-13 14:20:20 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:20:22 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:23 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:20:23 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:54 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-13 14:20:54 [Info] Tüm kategoriler listelendi
+2025-11-13 14:20:54 [Error] Yazarlar getirilirken bir hata oluştu.
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.AuthorService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\AuthorService.cs:line 153
+2025-11-13 14:20:59 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:20:59 [Info] Tüm kategoriler listelendi
+2025-11-13 14:21:54 [Info] Tüm kategoriler listelendi
+2025-11-13 14:22:03 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:22:26 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:22:26 [Info] Tüm kategoriler listelendi
+2025-11-13 14:22:54 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-13 14:22:54 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:22:54 [Error] Bir hata oluştu
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.CategoryService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\CategoryService.cs:line 148
+2025-11-13 14:50:19 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:50:19 [Info] Tüm kategoriler listelendi
+2025-11-13 14:51:12 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-13 14:51:12 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:51:12 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:02 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:02 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:04 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:05 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:20 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:20 [Error] Bir hata oluştu
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.CategoryService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\CategoryService.cs:line 148
+2025-11-13 14:54:24 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:24 [Error] Bir hata oluştu
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-13.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.CategoryService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\CategoryService.cs:line 148
+2025-11-13 14:54:27 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:27 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:38 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:40 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:40 [Info] Tüm kategoriler listelendi
+2025-11-13 14:54:56 [Info] Tüm yazarlar listelendi.
+2025-11-13 14:54:56 [Info] Tüm kategoriler listelendi
+2025-11-13 15:13:56 [Info] Tüm yazarlar listelendi.
+2025-11-13 15:13:56 [Info] Tüm kategoriler listelendi
+2025-11-13 15:13:58 [Info] Tüm yazarlar listelendi.
+2025-11-13 15:13:58 [Info] Tüm kategoriler listelendi
+2025-11-13 15:14:00 [Info] Tüm yazarlar listelendi.
+2025-11-13 15:14:00 [Info] Tüm kategoriler listelendi
+2025-11-13 15:14:01 [Info] Tüm yazarlar listelendi.
+2025-11-13 15:14:01 [Info] Tüm kategoriler listelendi
+2025-11-13 15:14:03 [Info] Tüm yazarlar listelendi.
+2025-11-13 15:14:03 [Info] Tüm kategoriler listelendi

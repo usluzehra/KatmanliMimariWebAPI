@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace UdemyKutuphaneAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthorController : ControllerBase

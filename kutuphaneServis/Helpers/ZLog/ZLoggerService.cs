@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace kutuphaneServis.Helpers.ZLog
 {
-    public class ZLogger : IZLogger
+    public class ZLoggerService : IZLogger
     {
         private const string LOG_DIR = @"C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\"; // C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\
         //_logDir de klasörün yolunu tutuyoruz
@@ -17,7 +17,7 @@ namespace kutuphaneServis.Helpers.ZLog
         //Yarış olmasın diye
         private  readonly object _lock = new object();
 
-        public ZLogger()
+        public ZLoggerService()
         {
             // logs klasörünü proje köküne sabitle
 

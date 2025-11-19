@@ -32,41 +32,64 @@ namespace kutuphaneServis.Services
         {
             try
             {
-            if (createBookModel == null)
-            { 
-                    return Task.FromResult<IResponse<BookCreateDto>>(ResponseGeneric<BookCreateDto>.Error("Kitap bilgileri boş olamaz"));
-            }
-            var book = new Book
-            {
-                Title = createBookModel.Title,
-                Description = createBookModel.Description,
-                CountOfPage = createBookModel.CountOfPage,
-                AuthorId = createBookModel.AuthorId,
-                CategoryId = createBookModel.CategoryId,
-                //RecordDate = DateTime.Now
+                if (createBookModel == null)
+                {
+                    return Task.FromResult<IResponse<BookCreateDto>>(
+                        ResponseGeneric<BookCreateDto>.Error("Kitap bilgileri boş olamaz"));
+                }
 
-            };
+                var book = new Book
+                {
+                    // Id **verme** → EF Core otomatik oluşturacak
+                    Title = createBookModel.Title,
+                    Description = createBookModel.Description,
+                    CountOfPage = createBookModel.CountOfPage,
+                    AuthorId = createBookModel.AuthorId,
+                    CategoryId = createBookModel.CategoryId,
+                    TotalCopies = createBookModel.TotalCopies,
+                    RecordDate = DateTime.Now
+                };
 
-                //daha önce eklenmiş mi diye kontrol edelim
-                var existingBook = _bookRepository.GetAll().FirstOrDefault(b => b.Title.ToLower() == book.Title.ToLower() && b.AuthorId == book.AuthorId);
+                // Aynı kitap kontrolü
+                var existingBook = _bookRepository.GetAll()
+                    .FirstOrDefault(b => b.Title.ToLower() == book.Title.ToLower()
+                                      && b.AuthorId == book.AuthorId);
+
                 if (existingBook != null)
                 {
                     _logger.LogWarning("Aynı isimde ve yazara sahip bir kitap zaten mevcut: {Title}", book.Title);
-                    return Task.FromResult<IResponse<BookCreateDto>>(ResponseGeneric<BookCreateDto>.Error("Aynı isimde ve yazara sahip bir kitap zaten mevcut"));
+                    return Task.FromResult<IResponse<BookCreateDto>>(
+                        ResponseGeneric<BookCreateDto>.Error("Aynı isimde ve yazara sahip bir kitap zaten mevcut"));
                 }
 
-                _bookRepository.Create(book);
+                // Kaydet
+                _bookRepository.Create(book); // SaveChanges → book.Id burada oluşur
 
-                _logger.LogInformation($"Yeni kitap oluşturuldu:" ,book.Title);
+                _logger.LogInformation("Yeni kitap oluşturuldu: {Title} - {Id}", book.Title, book.Id);
 
-                return Task.FromResult<IResponse<BookCreateDto>>(ResponseGeneric<BookCreateDto>.Success(null, "kitap başarıyla oluşturuldu"));
+                // Oluşan Id’yi frontend’e göndermek zorundayız
+                var dto = new BookCreateDto
+                {
+                    Id = book.Id,
+                    Title = book.Title,
+                    Description = book.Description,
+                    CountOfPage = book.CountOfPage,
+                    AuthorId = book.AuthorId,
+                    CategoryId = book.CategoryId,
+                    TotalCopies = book.TotalCopies
+                };
+
+                return Task.FromResult<IResponse<BookCreateDto>>(
+                    ResponseGeneric<BookCreateDto>.Success(dto, "Kitap başarıyla oluşturuldu"));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                _logger.LogError(ex, "Kitap oluşturulurken bir hata oluştu", createBookModel.Title);
-                return Task.FromResult<IResponse<BookCreateDto>>(ResponseGeneric<BookCreateDto>.Error($"Bir hata oluştu: {ex.Message}"));
+                _logger.LogError(ex, "Kitap oluşturulurken bir hata oluştu: {Title}", createBookModel.Title);
+                return Task.FromResult<IResponse<BookCreateDto>>(
+                    ResponseGeneric<BookCreateDto>.Error($"Bir hata oluştu: {ex.Message}"));
             }
         }
+
 
 
         public IResponse<Book> Delete(int id)
@@ -234,6 +257,10 @@ namespace kutuphaneServis.Services
                 if (bookUpdateDto.CategoryId != null)
                 {
                     bookEntity.CategoryId = bookUpdateDto.CategoryId.Value;
+                }
+                if(bookUpdateDto.TotalCopies != null)
+                {
+                    bookEntity.TotalCopies = bookUpdateDto.TotalCopies.Value;
                 }
 
                 _bookRepository.Update(bookEntity);

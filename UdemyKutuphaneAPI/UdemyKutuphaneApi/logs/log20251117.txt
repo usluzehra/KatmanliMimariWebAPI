@@ -1,0 +1,113 @@
+2025-11-17 16:46:58.454 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name], [r].[NormalizedName], [r].[RecordDate]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = N'ADMIN'
+2025-11-17 16:46:58.522 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name], [r].[NormalizedName], [r].[RecordDate]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = N'USER'
+2025-11-17 16:46:58.558 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Name], [u].[Password], [u].[RecordDate], [u].[Surname], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-11-17 16:46:58.582 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__adminUser_Id_0='?' (DbType = Int32), @__userRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserRoles] AS [u]
+        WHERE [u].[UserId] = @__adminUser_Id_0 AND [u].[RoleId] = @__userRole_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-17 16:46:58.586 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__adminUser_Id_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserRoles] AS [u]
+        WHERE [u].[UserId] = @__adminUser_Id_0 AND [u].[RoleId] = @__adminRole_Id_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-11-17 16:46:58.752 +03:00 [INF] User profile is available. Using 'C:\Users\zehra\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-17 16:46:59.007 +03:00 [INF] Now listening on: https://localhost:7062
+2025-11-17 16:46:59.007 +03:00 [INF] Now listening on: http://localhost:5015
+2025-11-17 16:46:59.110 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-17 16:46:59.111 +03:00 [INF] Hosting environment: Development
+2025-11-17 16:46:59.111 +03:00 [INF] Content root path: C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi
+2025-11-17 16:47:03.118 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger - null null
+2025-11-17 16:47:03.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger - 301 0 null 274.0064ms
+2025-11-17 16:47:03.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/index.html - null null
+2025-11-17 16:47:03.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/index.html - 200 null text/html;charset=utf-8 94.8106ms
+2025-11-17 16:47:03.495 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/swagger-ui.css - null null
+2025-11-17 16:47:03.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/swagger-ui-bundle.js - null null
+2025-11-17 16:47:03.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-17 16:47:03.496 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-17 16:47:03.519 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/_vs/browserLink - null null
+2025-11-17 16:47:03.528 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 31.5824ms
+2025-11-17 16:47:03.581 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-11-17 16:47:03.581 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-11-17 16:47:03.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 87.7443ms
+2025-11-17 16:47:03.583 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/swagger-ui.css - 200 152034 text/css 87.8877ms
+2025-11-17 16:47:03.600 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-11-17 16:47:03.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 104.6857ms
+2025-11-17 16:47:03.626 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.306ms
+2025-11-17 16:47:04.393 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - null null
+2025-11-17 16:47:04.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.8316ms
+2025-11-17 16:48:02.886 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7062/api/Book/ListAll - null null
+2025-11-17 16:48:02.886 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7062/api/Category/ListAll - null null
+2025-11-17 16:48:02.889 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7062/api/Author/ListAll - null null
+2025-11-17 16:48:02.923 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:02.923 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:02.928 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7062/api/Category/ListAll - 204 null null 41.4555ms
+2025-11-17 16:48:02.928 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7062/api/Book/ListAll - 204 null null 41.457ms
+2025-11-17 16:48:02.928 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:02.928 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7062/api/Author/ListAll - 204 null null 42.0041ms
+2025-11-17 16:48:02.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Book/ListAll - null null
+2025-11-17 16:48:02.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Category/ListAll - null null
+2025-11-17 16:48:02.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7062/api/Author/ListAll - null null
+2025-11-17 16:48:02.940 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:02.940 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:02.940 +03:00 [INF] CORS policy execution successful.
+2025-11-17 16:48:03.196 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-17 16:48:03.196 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-17 16:48:03.198 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-11-17 16:48:03.261 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+2025-11-17 16:48:03.261 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+2025-11-17 16:48:03.261 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '13.11.2025 12:06:12', Current time (UTC): '17.11.2025 13:48:03'.
+2025-11-17 16:48:03.266 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.266 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.266 +03:00 [INF] Executing endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.293 +03:00 [INF] Route matched with {action = "GetAll", controller = "Author"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.AuthorController (UdemyKutuphaneAPI).
+2025-11-17 16:48:03.293 +03:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.CategoryController (UdemyKutuphaneAPI).
+2025-11-17 16:48:03.293 +03:00 [INF] Route matched with {action = "GetAll", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller UdemyKutuphaneAPI.Controllers.BookController (UdemyKutuphaneAPI).
+2025-11-17 16:48:03.686 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name], [c].[RecordDate]
+FROM [Categories] AS [c]
+2025-11-17 16:48:03.693 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[CategoryId], [b].[CountOfPage], [b].[Description], [b].[ImageFileKey], [b].[RecordDate], [b].[Title], [b].[TotalCopies]
+FROM [Books] AS [b]
+2025-11-17 16:48:03.703 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ImageFileKey], [a].[Name], [a].[PlaceOfBirth], [a].[RecordDate], [a].[Surname], [a].[YearOfBirth]
+FROM [Authors] AS [a]
+2025-11-17 16:48:03.734 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.BookQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-17 16:48:03.734 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneDataAccess.DTOs.CategoryQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-17 16:48:03.734 +03:00 [INF] Executing OkObjectResult, writing value of type 'kutuphaneServis.Response.ResponseGeneric`1[[System.Collections.Generic.IEnumerable`1[[KutuphaneCore.DTOs.AuthorQuaryDto, KutuphaneDataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-17 16:48:03.781 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI) in 476.3116ms
+2025-11-17 16:48:03.781 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI) in 476.2406ms
+2025-11-17 16:48:03.781 +03:00 [INF] Executed action UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI) in 476.5238ms
+2025-11-17 16:48:03.782 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.BookController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.782 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.AuthorController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.782 +03:00 [INF] Executed endpoint 'UdemyKutuphaneAPI.Controllers.CategoryController.GetAll (UdemyKutuphaneAPI)'
+2025-11-17 16:48:03.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Author/ListAll - 200 null application/json; charset=utf-8 863.7285ms
+2025-11-17 16:48:03.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Category/ListAll - 200 null application/json; charset=utf-8 863.7347ms
+2025-11-17 16:48:03.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7062/api/Book/ListAll - 200 null application/json; charset=utf-8 863.7814ms

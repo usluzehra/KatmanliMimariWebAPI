@@ -1,0 +1,249 @@
+2025-11-07 09:12:40 [Info] Tüm kategoriler listelendi
+2025-11-07 09:12:40 [Error] Yazarlar getirilirken bir hata oluştu.
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-07.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.AuthorService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\AuthorService.cs:line 153
+2025-11-07 09:13:01 [Info] Tüm kategoriler listelendi
+2025-11-07 09:13:02 [Error] Yazarlar getirilirken bir hata oluştu.
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-07.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.AuthorService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\AuthorService.cs:line 153
+2025-11-07 09:13:10 [Info] Tüm kategoriler listelendi
+2025-11-07 09:13:10 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:13:50 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 09:13:50 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:13:51 [Error] Bir hata oluştu
+System.IO.IOException: The process cannot access the file 'C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\UdemyKutuphaneAPI\UdemyKutuphaneApi\logs\2025-11-07.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.File.OpenHandle(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.WriteToFile(String path, FileMode mode, String contents, Encoding encoding)
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Log(String message, LogLevelEnum level, String member, String file) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 47
+   at kutuphaneServis.Helpers.ZLog.ZLoggerService.Info(String message) in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Helpers\ZLog\ZLoggerService.cs:line 73
+   at kutuphaneServis.Services.CategoryService.ListAll() in C:\Users\zehra\Desktop\projeler\KatmanliMimariGenel\kutuphaneServis\Services\CategoryService.cs:line 148
+2025-11-07 09:30:36 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 09:31:37 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:31:37 [Info] Tüm kategoriler listelendi
+2025-11-07 09:31:38 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:31:38 [Info] Tüm kategoriler listelendi
+2025-11-07 09:31:44 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:31:57 [Info] Tüm kategoriler listelendi
+2025-11-07 09:49:56 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:51:45 [Info] Tüm kategoriler listelendi
+2025-11-07 09:51:47 [Info] Tüm yazarlar listelendi.
+2025-11-07 09:51:47 [Info] Tüm kategoriler listelendi
+2025-11-07 11:27:36 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 11:27:36 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:27:36 [Info] Tüm kategoriler listelendi
+2025-11-07 11:27:39 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:27:41 [Info] Tüm kategoriler listelendi
+2025-11-07 11:27:42 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:28:44 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:30:04 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:30:35 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:30:39 [Info] Tüm kategoriler listelendi
+2025-11-07 11:30:40 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:32:36 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:33:21 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:34:53 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:35:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:35:38 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:36:13 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:40:01 [Info] Tüm kategoriler listelendi
+2025-11-07 11:40:02 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:42:16 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:43:12 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 11:43:12 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:43:18 [Info] Tüm kategoriler listelendi
+2025-11-07 11:45:12 [Info] Tüm kategoriler listelendi
+2025-11-07 11:45:23 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:50:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:51:02 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:51:22 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:52:02 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:52:16 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:52:52 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:53:31 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:53:53 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:54:05 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:56:01 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:56:13 [Info] Tüm yazarlar listelendi.
+2025-11-07 11:56:36 [Info] Tüm kategoriler listelendi
+2025-11-07 11:57:58 [Info] Tüm kategoriler listelendi
+2025-11-07 13:44:10 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 13:44:11 [Info] Tüm kategoriler listelendi
+2025-11-07 13:44:24 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 13:44:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:44:28 [Info] Tüm kategoriler listelendi
+2025-11-07 13:44:34 [Info] Tüm kategoriler listelendi
+2025-11-07 13:44:34 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:44:48 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 13:44:51 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:44:55 [Info] Tüm kategoriler listelendi
+2025-11-07 13:45:01 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:45:01 [Info] Tüm kategoriler listelendi
+2025-11-07 13:52:12 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 13:52:23 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 13:52:23 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:52:23 [Info] Tüm kategoriler listelendi
+2025-11-07 13:52:34 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:52:34 [Info] Tüm kategoriler listelendi
+2025-11-07 13:52:35 [Info] Tüm kategoriler listelendi
+2025-11-07 13:52:35 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:52:36 [Info] Tüm kategoriler listelendi
+2025-11-07 13:52:36 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:52:37 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:52:37 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:00 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 13:53:00 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:53:00 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:08 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:53:08 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:10 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:10 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:53:27 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:53:28 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:40 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:43 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:53:47 [Info] Tüm kategoriler listelendi
+2025-11-07 13:53:50 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:55:50 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:55:53 [Info] Tüm yazarlar listelendi.
+2025-11-07 13:56:00 [Info] Tüm kategoriler listelendi
+2025-11-07 14:01:53 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:21 [Info] Kullanıcı girişi başarılı: zehus
+2025-11-07 14:08:21 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:24 [Info] Tüm kategoriler listelendi
+2025-11-07 14:08:26 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:27 [Info] Tüm kategoriler listelendi
+2025-11-07 14:08:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:28 [Info] Tüm kategoriler listelendi
+2025-11-07 14:08:29 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:30 [Info] Tüm kategoriler listelendi
+2025-11-07 14:08:30 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:08:31 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:01 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:06 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:09 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:10 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:10 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:13 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:16 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:17 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:17 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:30 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:30 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:33 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:35 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:35 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:37 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:39 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:39 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:40 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:40 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:41 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:09:41 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:43 [Info] Tüm kategoriler listelendi
+2025-11-07 14:09:54 [Info] Tüm kategoriler listelendi
+2025-11-07 14:10:23 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:11:14 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 14:11:14 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:11:14 [Info] Tüm kategoriler listelendi
+2025-11-07 14:11:17 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:11:33 [Info] Tüm kategoriler listelendi
+2025-11-07 14:11:45 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:11:45 [Info] Tüm kategoriler listelendi
+2025-11-07 14:12:25 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:12:28 [Info] Yazar silindi: Mehmet Rauf
+2025-11-07 14:12:28 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:12:32 [Info] Yazar silindi: Sabahattin Ali
+2025-11-07 14:12:32 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:12:34 [Info] Yazar silindi: string string
+2025-11-07 14:12:34 [Warn] Yazarlar bulunamadı.
+2025-11-07 14:12:36 [Warn] Silinecek yazar bulunamadı.
+2025-11-07 14:12:38 [Warn] Yazarlar bulunamadı.
+2025-11-07 14:13:02 [Info] Yeni yazar oluşturuldu: Orhan Pamuk
+2025-11-07 14:13:02 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:13:27 [Info] Yeni yazar oluşturuldu: Elif Şafak
+2025-11-07 14:13:27 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:13:51 [Info] Yeni yazar oluşturuldu: Ahmet Hamdi Tanpınar
+2025-11-07 14:13:51 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:14:13 [Info] Yeni yazar oluşturuldu: Yaşar Kemal
+2025-11-07 14:14:13 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:14:39 [Info] Yeni yazar oluşturuldu: Halide Edib Adıvar
+2025-11-07 14:14:39 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:14:59 [Info] Yeni yazar oluşturuldu: Zülfü Livaneli
+2025-11-07 14:14:59 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:15:29 [Info] Yeni yazar oluşturuldu: Ayşe Kulin
+2025-11-07 14:15:29 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:15:50 [Info] Yeni yazar oluşturuldu: Sabahattin Ali
+2025-11-07 14:15:50 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:16:16 [Info] Tüm kategoriler listelendi
+2025-11-07 14:16:18 [Info] kategori silindi: Aşk
+2025-11-07 14:16:19 [Info] Tüm kategoriler listelendi
+2025-11-07 14:16:20 [Info] kategori silindi: psikoloji
+2025-11-07 14:16:20 [Warn] kategori bulunamadı
+2025-11-07 14:16:22 [Warn] kategori bulunamadı
+2025-11-07 14:16:54 [Info] Yeni kategori oluşturuldu: Roman
+2025-11-07 14:16:54 [Info] Tüm kategoriler listelendi
+2025-11-07 14:17:05 [Info] Yeni kategori oluşturuldu: Tarih
+2025-11-07 14:17:05 [Info] Tüm kategoriler listelendi
+2025-11-07 14:17:21 [Info] Yeni kategori oluşturuldu: Klasikler
+2025-11-07 14:17:21 [Info] Tüm kategoriler listelendi
+2025-11-07 14:17:36 [Info] Yeni kategori oluşturuldu: Psikoloji
+2025-11-07 14:17:36 [Info] Tüm kategoriler listelendi
+2025-11-07 14:17:48 [Info] Yeni kategori oluşturuldu: Aşk
+2025-11-07 14:17:48 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:05 [Info] Yeni kategori oluşturuldu: Biyografi
+2025-11-07 14:18:05 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:17 [Info] Yeni kategori oluşturuldu: Felsefe
+2025-11-07 14:18:17 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:30 [Info] Yeni kategori oluşturuldu: Politik
+2025-11-07 14:18:30 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:40 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:18:40 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:44 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:18:44 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:46 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:18:46 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:49 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:18:49 [Info] Tüm kategoriler listelendi
+2025-11-07 14:18:56 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:18:56 [Info] Tüm kategoriler listelendi
+2025-11-07 14:19:27 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:19:27 [Info] Tüm kategoriler listelendi
+2025-11-07 14:19:48 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:19:48 [Info] Tüm kategoriler listelendi
+2025-11-07 14:20:11 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:20:11 [Info] Tüm kategoriler listelendi
+2025-11-07 14:20:35 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:20:35 [Info] Tüm kategoriler listelendi
+2025-11-07 14:21:05 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:21:05 [Info] Tüm kategoriler listelendi
+2025-11-07 14:21:33 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:21:33 [Info] Tüm kategoriler listelendi
+2025-11-07 14:21:56 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:21:56 [Info] Tüm kategoriler listelendi
+2025-11-07 14:22:18 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:22:18 [Info] Tüm kategoriler listelendi
+2025-11-07 14:22:42 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:22:42 [Info] Tüm kategoriler listelendi
+2025-11-07 14:23:08 [Info] Tüm yazarlar listelendi.
+2025-11-07 14:23:08 [Info] Tüm kategoriler listelendi
+2025-11-07 15:18:24 [Info] Kullanıcı girişi başarılı: zehrauslu
+2025-11-07 15:18:24 [Info] Tüm yazarlar listelendi.
+2025-11-07 15:18:24 [Info] Tüm kategoriler listelendi
+2025-11-07 15:21:43 [Info] Tüm yazarlar listelendi.
+2025-11-07 15:27:21 [Info] Tüm kategoriler listelendi
+2025-11-07 15:27:22 [Info] Tüm yazarlar listelendi.

@@ -19,7 +19,7 @@ namespace UdemyKutuphaneAPI.Controllers
 
 
         //program.cs deki rate limiting ayarlarını kullanır
-        [EnableRateLimiting("ReateLimiter")]
+        //[EnableRateLimiting("ReateLimiter")]
         [HttpGet("ListAll")]
         public IActionResult GetAll()
         {
@@ -56,7 +56,7 @@ namespace UdemyKutuphaneAPI.Controllers
             {
                 return BadRequest(result.Result.Message);
             }
-            return Ok(result);
+            return Ok(result.Result);
         }
 
         [HttpGet("GetById")]

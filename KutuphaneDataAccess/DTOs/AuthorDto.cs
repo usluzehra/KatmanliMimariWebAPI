@@ -23,6 +23,7 @@ namespace KutuphaneCore.DTOs
         public string Surname { get; set; }
         public string PlaceOfBirth { get; set; }
         public int YearOfBirth { get; set; }
+        public string? ImageFileKey { get; set; }
     }
 
     public class AuthorUpdateDto

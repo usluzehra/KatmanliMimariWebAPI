@@ -25,19 +25,23 @@ namespace kutuphaneServis.Services
         private readonly IGenericRepository<User> _userRepository;
         private readonly IConfiguration _configuration;
         private readonly IZLogger _zLogger;
+        private readonly IGenericRepository<Role> _roleRepository;
+        private readonly IGenericRepository<UserRole> _userRoleRepository;
 
-        public UserService(IGenericRepository<User> userRepository, IConfiguration configuration, IZLogger zLogger)
+        public UserService(IGenericRepository<User> userRepository, IConfiguration configuration, IZLogger zLogger, IGenericRepository<Role> roleRepository, IGenericRepository<UserRole> userRoleRepository)
         {
             _userRepository = userRepository;
             _configuration = configuration;
             _zLogger = zLogger;
+            _roleRepository = roleRepository;
+            _userRoleRepository = userRoleRepository;
         }
         public IResponse<UserCreateDto> CreateUser(UserCreateDto user)
         {
             if (user == null)
             {
                 _zLogger.Error("Kullanıcı bilgileri boş olamaz.");
-                ResponseGeneric<UserCreateDto>.Error("Kullanıcı bilgileri boş olamaz.");
+                return ResponseGeneric<UserCreateDto>.Error("Kullanıcı bilgileri boş olamaz.");
             }
             //kullanıcı adı veya şifre boş olamaz
 
@@ -71,6 +75,32 @@ namespace kutuphaneServis.Services
             };
             newUser.RecordDate = DateTime.Now;
             _userRepository.Create(newUser);
+
+
+            // --- Default rol: "User" ---
+            var roleName = "User";
+            var norm = roleName.ToUpperInvariant();
+
+            // 1) Rol var mı? yoksa oluştur
+            var role = _roleRepository.GetAll()
+                .FirstOrDefault(r => r.NormalizedName == norm);
+
+            if (role == null)
+            {
+                role = new Role { Name = roleName, NormalizedName = norm };
+                _roleRepository.Create(role);
+            }
+
+            // 2) Kullanıcı bu role zaten bağlı mı? değilse bağla
+            var hasLink = _userRoleRepository.GetAll()
+                .Any(ur => ur.UserId == newUser.Id && ur.RoleId == role.Id);
+
+            if (!hasLink)
+            {
+                _userRoleRepository.Create(new UserRole { UserId = newUser.Id, RoleId = role.Id });
+            }
+
+
             _zLogger.Info($"Yeni kullanıcı oluşturuldu: {newUser.Username}");
             return ResponseGeneric<UserCreateDto>.Success(null,"Kullanıcı kaydı başarıyla oluşturuldu.");
         }
@@ -115,21 +145,45 @@ namespace kutuphaneServis.Services
 
         private string GenerateJwtToken(User user)
         {
+            // Kullanıcının rol ADLARINI doğrudan çek
+            var roleNames = _userRoleRepository.GetAll()
+                .Where(ur => ur.UserId == user.Id)
+                .Join(_roleRepository.GetAll(),
+                      ur => ur.RoleId,
+                      r => r.Id,
+                      (ur, r) => r.Name)
+                .Distinct()
+                .ToList();
+
             var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, user.Name ?? user.Username),
+        new Claim(ClaimTypes.Sid , user.Id.ToString()),
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim("UserId", user.Id.ToString()),
+        new Claim(ClaimTypes.Email, user.Email),
+        new Claim("email", user.Email),
+    };
+
+            // ROL claim’lerini iki formatta ekle (UI ve [Authorize] için)
+            foreach (var rn in roleNames)
             {
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.Sid ,user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-            };
+                claims.Add(new Claim(ClaimTypes.Role, rn));
+                claims.Add(new Claim("Roles", rn));
+            }
+
+            var minutes = int.TryParse(_configuration["Jwt:ExpireMinutes"], out var m) ? m : 60;
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(1),
+                expires: DateTime.Now.AddMinutes(minutes),
                 signingCredentials: creds);
+
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
